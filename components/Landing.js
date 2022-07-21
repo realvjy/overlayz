@@ -28,10 +28,10 @@ const Landing = () => {
                         layout={"responsive"}
                     />
                 </OLogo>
-            </LogoFloating>
+            </LogoFloating>``
             <LandingContainer>
                 <ContentWrap>
-                    <ContentLogo>
+                    <ContentLogo className="oicon">
                         <Image
                             src={LogoIcon}
                             unoptimized={true}
@@ -95,6 +95,14 @@ const ContentLogo = styled.div`
     margin-bottom: 24px;
     display: flex;
     max-width: 500px;
+    &.oicon{
+        visibility: hidden;
+        height: 0;
+        @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
+            visibility: visible;
+            height: auto;
+        }
+    }
 `
 const ContentBtn = styled.div`
     margin-top: 54px;
@@ -106,7 +114,7 @@ const LogoFloating = styled.div`
     overflow: hidden;
     height: 100%;
     width: 100%;
-    @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+    @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
         display: none;
     }
 `
