@@ -28,7 +28,7 @@ const Landing = () => {
                         layout={"responsive"}
                     />
                 </OLogo>
-            </LogoFloating>``
+            </LogoFloating>
             <LandingContainer>
                 <ContentWrap>
                     <ContentLogo className="oicon">
