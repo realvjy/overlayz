@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
-import { Container } from "./ReusableStyles";
-
+import { Container, StyledLink } from "./ReusableStyles";
+import Link from "next/link";
 
 
 const FamilyBox = () => {
