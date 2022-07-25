@@ -5,71 +5,74 @@ import LogoIcon from "../public/overlayz.png";
 import LogoShadow from "../public/logo-shadow.png";
 import OverlayzStudio from '../public/overlayz-studio.png'
 import Link from "next/link";
-import Three3 from "../public/3dicons.png"
-import illlu from "../public/illlustrations.png"
-import uilogos from "../public/uilogos.png"
+import FamilyBox from "./Family";
+
 
 const Landing = () => {
 
     return (
-        <LandingHome>
-            <LogoFloating>
-                <OShadow>
-                    <Image
-                        src={LogoShadow}
-                        unoptimized={true}
-                        layout={"responsive"}
-                    />
-                </OShadow>
-                <OLogo>
-                    <Image
-                        src={LogoIcon}
-                        unoptimized={true}
-                        layout={"responsive"}
-                    />
-                </OLogo>
-            </LogoFloating>
-            <LandingContainer>
-                <ContentWrap>
-                    <ContentLogo className="oicon">
+        <>
+            <LandingHome>
+                <LogoFloating>
+                    <OShadow>
+                        <Image
+                            src={LogoShadow}
+                            unoptimized={true}
+                            layout={"responsive"}
+                        />
+                    </OShadow>
+                    <OLogo>
                         <Image
                             src={LogoIcon}
                             unoptimized={true}
-                            height={192}
-                            width={192}
+                            layout={"responsive"}
                         />
-                    </ContentLogo>
-                    <ContentLogo>
-                        <Image
-                            src={OverlayzStudio}
-                            unoptimized={true}
-                            height={192}
-                            width={450}
-                        />
-                    </ContentLogo>
-                    <ContentBtn>
-                        <Link href="https://twitter.com/realvjy" passHref>
-                            <ButtonLink>
-                                Contact Us
-                            </ButtonLink>
-                        </Link>
-                    </ContentBtn>
-
-
-                    <Founder>
-                        <h3>Founder</h3>
-                        <h3 className="name">
-                            <Link href="http://vjy.me" passHref>
-                                <a>
-                                    @REALVJY
-                                </a>
+                    </OLogo>
+                </LogoFloating>
+                <LandingContainer>
+                    <ContentWrap>
+                        <ContentLogo className="oicon">
+                            <Image
+                                src={LogoIcon}
+                                unoptimized={true}
+                                height={192}
+                                width={192}
+                            />
+                        </ContentLogo>
+                        <ContentLogo>
+                            <Image
+                                src={OverlayzStudio}
+                                unoptimized={true}
+                                height={192}
+                                width={450}
+                            />
+                        </ContentLogo>
+                        <ContentBtn>
+                            <Link href="https://twitter.com/realvjy" passHref>
+                                <ButtonLink>
+                                    Contact Us
+                                </ButtonLink>
                             </Link>
-                        </h3>
+                        </ContentBtn>
 
-                    </Founder>
-                </ContentWrap>
-            </LandingContainer>
-        </LandingHome>
+                        <FamilyBox />
+
+                        <Founder>
+                            <h3>Founder</h3>
+                            <h3 className="name">
+                                <Link href="http://vjy.me" passHref>
+                                    <a>
+                                        @REALVJY
+                                    </a>
+                                </Link>
+                            </h3>
+                        </Founder>
+
+                    </ContentWrap>
+                </LandingContainer>
+            </LandingHome>
+        </>
+
     )
 };
 
@@ -88,7 +91,7 @@ const LandingContainer = styled(Container)`
 `
 
 const ContentWrap = styled.div`
-    padding: 54px;
+    padding: 44px;
 `
 
 const ContentLogo = styled.div`
@@ -155,11 +158,13 @@ const OShadow = styled.div`
 `
 
 const Founder = styled.div`
-    margin-top: 40px;
+    margin-top: 80px;
     display: flex;
-    /* position: fixed;
-    bottom: 100px; */
-    
+    position: fixed;
+    bottom: 100px;
+    @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+        position: initial;
+    }
     h3{
         color: var(--light-black);
         font-weight: 400;

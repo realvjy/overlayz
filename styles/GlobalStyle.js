@@ -42,7 +42,7 @@ body {
   color: ${({ theme }) => theme.text.primary};
   text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    background-image: url('/dots.png');
+    /* background-image: url('/dots.png'); */
 
 }
 
@@ -52,6 +52,7 @@ a{
 
 .main{
     min-height: 100vh;
+    
 }
 .toast-container {
   border-radius: 12px;

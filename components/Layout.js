@@ -1,4 +1,9 @@
 import styled from 'styled-components'
+import ReactDOM from 'react-dom';
+import OverlayzStudio from '../public/react-logo.png'
+
+
+
 export default function Layout({ children }) {
     return (
         <Main >
