@@ -15,7 +15,7 @@ const FamilyBox = () => {
 
     return (
         <Family>
-            <h3>Family</h3>
+            <h3>Our Family</h3>
             <FamWrap>
                 <Fam>
                     <Link href="https://3dicons.co?ref=overlayz" passHref>
@@ -136,11 +136,11 @@ const Hero = styled.div`
 const Family = styled.div`
     margin-top: 60px;
     h3{
-        font-size: 18px;
+        font-size: 14px;
         text-transform: uppercase;
-        letter-spacing: 4px;
+        letter-spacing: 6px;
         margin: 12px 0;
-        font-weight: 500;
+        font-weight: 600;
         color: var(--light-black);
     }
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {

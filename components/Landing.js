@@ -92,6 +92,7 @@ const LandingContainer = styled(Container)`
 
 const ContentWrap = styled.div`
     padding: 44px;
+    margin-bottom: 40px;
 `
 
 const ContentLogo = styled.div`
