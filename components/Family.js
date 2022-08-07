@@ -10,6 +10,7 @@ import uiprint from "../public/uiprint.png"
 import bloo from "../public/bloo.png"
 import contra from "../public/contra.png"
 import NextA from "../public/next.png"
+import Designletter from "../public/designletter.png"
 
 const FamilyBox = () => {
 
@@ -48,6 +49,19 @@ const FamilyBox = () => {
                         <StyledLink>
                             <Image
                                 src={illlu}
+                                unoptimized={true}
+                                height={60}
+                                width={60}
+                            />
+                        </StyledLink>
+                    </Link>
+
+                </Fam>
+                <Fam>
+                    <Link href="http://designletter.co/?ref=overlayz" passHref>
+                        <StyledLink>
+                            <Image
+                                src={Designletter}
                                 unoptimized={true}
                                 height={60}
                                 width={60}
@@ -108,19 +122,8 @@ const FamilyBox = () => {
                     </Link>
 
                 </Fam>
-                <Fam>
-                    <Link href="http://twitter.com/realvjy" passHref>
-                        <StyledLink>
-                            <Image
-                                src={NextA}
-                                unoptimized={true}
-                                height={60}
-                                width={60}
-                            />
-                        </StyledLink>
-                    </Link>
 
-                </Fam>
+
             </FamWrap>
         </Family>
     )

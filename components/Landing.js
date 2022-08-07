@@ -35,8 +35,8 @@ const Landing = () => {
                             <Image
                                 src={LogoIcon}
                                 unoptimized={true}
-                                height={192}
-                                width={192}
+                                height={170}
+                                width={170}
                             />
                         </ContentLogo>
                         <ContentLogo>
@@ -62,7 +62,7 @@ const Landing = () => {
                             <h3 className="name">
                                 <Link href="http://vjy.me" passHref>
                                     <a>
-                                        @REALVJY
+                                        @realvjy
                                     </a>
                                 </Link>
                             </h3>
@@ -99,6 +99,9 @@ const ContentLogo = styled.div`
     margin-bottom: 24px;
     display: flex;
     max-width: 500px;
+    @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
+        max-width: 85%;
+    }
     &.oicon{
         visibility: hidden;
         height: 0;
@@ -110,6 +113,9 @@ const ContentLogo = styled.div`
 `
 const ContentBtn = styled.div`
     margin-top: 54px;
+    @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
+        margin-top: 32px;
+    }
 `
 
 
@@ -171,11 +177,13 @@ const Founder = styled.div`
         font-weight: 400;
     }
     .name{
-        
         margin-left: 8px;
         font-weight: 600;
     }
     a{
+        img{
+            height: 20px;
+        }
         color: var(--light-black);
         &:hover{
             color: var(--white);

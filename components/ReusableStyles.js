@@ -89,6 +89,7 @@ export const IssueGrid = styled.div`
 
 export const ButtonLink = styled.a`
     font-size: 24px;
+    font-weight: 500;
     display: inline-flex;
     line-height: normal;
     padding: 16px 32px;
@@ -101,6 +102,9 @@ export const ButtonLink = styled.a`
     transition: all .3s;
     position: relative;
     overflow: hidden;
+    @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+       font-size: 18px;
+    }
     box-shadow: 
         inset 12px 2px 10px #FFBD6F;
     &:active{

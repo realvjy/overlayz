@@ -8,7 +8,7 @@ import { darkTheme, lightTheme, lfgTheme } from "../styles/theme.config";
 
 function MyApp({ Component, pageProps }) {
     const [isMounted, setIsMounted] = useState(false)
-    const darkmode = useDarkMode(true)
+    // const darkmode = useDarkMode(true)
     const theme = darkTheme
 
     useEffect(() => {
