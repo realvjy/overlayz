@@ -77,13 +77,12 @@ const LandingContainer = styled(Container)`
 `
 
 const ContentWrap = styled.div`
-    margin-bottom: 40px;
-    margin-top: 20%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 80%;
+    padding: 32px;
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
         align-items: flex-start;
         padding-left: 40px;
@@ -95,7 +94,7 @@ const ContentLogo = styled.div`
     margin-bottom: 24px;
     display: flex;
     img{
-        height: 200px;
+        height: 160px;
         @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
             height: 100px;
         }
@@ -192,16 +191,16 @@ const BottomWrap = styled.div`
 const TopWrap = styled.div`
     display: flex;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 10%;
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
         flex-direction: column;
-        padding-top: 10px;
+        padding-top: 40px;
         align-items: flex-start;
     }
 `
 const LogoO = styled.div`
     img{
-        height: 400px;
+        height: 320px;
         @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
             height: 150px;
         }
