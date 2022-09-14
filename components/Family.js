@@ -2,15 +2,15 @@ import Image from "next/image";
 import styled from "styled-components";
 import { Container, StyledLink } from "./ReusableStyles";
 import Link from "next/link";
-import Three3 from "../public/3dicons.png"
-import illlu from "../public/illlustrations.png"
-import uilogos from "../public/uilogos.png"
-import uiHues from "../public/uihues.png"
-import uiprint from "../public/uiprint.png"
-import bloo from "../public/bloo.png"
-import contra from "../public/contra.png"
-import NextA from "../public/next.png"
-import Designletter from "../public/designletter.png"
+const Three3 = "/3dicons.png"
+const illlu = "/illlustrations.png"
+const uilogos = "/uilogos.png"
+const uiHues = "/uihues.png"
+const uiprint = "/uiprint.png"
+const bloo = "/bloo.png"
+const contra = "/contra.png"
+const NextA = "/next.png"
+const Designletter = "/designletter.png"
 
 const FamilyBox = () => {
 
@@ -21,11 +21,10 @@ const FamilyBox = () => {
                 <Fam>
                     <Link href="https://3dicons.co?ref=overlayz" passHref>
                         <StyledLink>
-                            <Image
+                            <img
                                 src={Three3}
                                 unoptimized={true}
-                                height={60}
-                                width={60}
+
                             />
                         </StyledLink>
                     </Link>
@@ -34,11 +33,10 @@ const FamilyBox = () => {
                 <Fam>
                     <Link href="https://uilogos.co?ref=overlayz" passHref>
                         <StyledLink>
-                            <Image
+                            <img
                                 src={uilogos}
                                 unoptimized={true}
-                                height={60}
-                                width={60}
+
                             />
                         </StyledLink>
                     </Link>
@@ -47,11 +45,10 @@ const FamilyBox = () => {
                 <Fam>
                     <Link href="https://illlustrations.co?ref=overlayz" passHref>
                         <StyledLink>
-                            <Image
+                            <img
                                 src={illlu}
                                 unoptimized={true}
-                                height={60}
-                                width={60}
+
                             />
                         </StyledLink>
                     </Link>
@@ -60,11 +57,10 @@ const FamilyBox = () => {
                 <Fam>
                     <Link href="http://designletter.co/?ref=overlayz" passHref>
                         <StyledLink>
-                            <Image
+                            <img
                                 src={Designletter}
                                 unoptimized={true}
-                                height={60}
-                                width={60}
+
                             />
                         </StyledLink>
                     </Link>
@@ -73,11 +69,10 @@ const FamilyBox = () => {
                 <Fam>
                     <Link href="https://www.figma.com/community/widget/1128028298799358676/Random-Hues" passHref>
                         <StyledLink>
-                            <Image
+                            <img
                                 src={uiHues}
                                 unoptimized={true}
-                                height={60}
-                                width={60}
+
                             />
                         </StyledLink>
                     </Link>
@@ -86,11 +81,10 @@ const FamilyBox = () => {
                 <Fam>
                     <Link href="https://contrauikit.com?ref=overlayz" passHref>
                         <StyledLink>
-                            <Image
+                            <img
                                 src={contra}
                                 unoptimized={true}
-                                height={60}
-                                width={60}
+
                             />
                         </StyledLink>
                     </Link>
@@ -99,11 +93,10 @@ const FamilyBox = () => {
                 <Fam>
                     <Link href="http://bloouikit.com?ref=overlayz" passHref>
                         <StyledLink>
-                            <Image
+                            <img
                                 src={bloo}
                                 unoptimized={true}
-                                height={60}
-                                width={60}
+
                             />
                         </StyledLink>
                     </Link>
@@ -112,11 +105,10 @@ const FamilyBox = () => {
                 <Fam>
                     <Link href="https://uiprint.co?ref=overlayz" passHref>
                         <StyledLink>
-                            <Image
+                            <img
                                 src={uiprint}
                                 unoptimized={true}
-                                height={60}
-                                width={60}
+
                             />
                         </StyledLink>
                     </Link>
@@ -145,9 +137,14 @@ const Family = styled.div`
         margin: 12px 0;
         font-weight: 600;
         color: var(--light-black);
+        text-align: center;
+        @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+            text-align: left;
+        }
     }
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-        margin-top: 40px;
+        margin-top: 100px;
+        text-align: left;
     }
 `
 const FamWrap = styled.div`
@@ -155,18 +152,22 @@ const FamWrap = styled.div`
     display: grid;
     grid-auto-flow: column;
     grid-gap: 16px;
+    
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-auto-flow: row;
         grid-gap: 24px;
-        padding-right: 24px;
+        justify-content: center;
     }
-
 `
 const Fam = styled.div`
-    @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-
+    img{
+        height: 50px;
+        @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+            height: 40px;
+        }
     }
+   
     &:hover{
         transform: scale(1.05);
     }
