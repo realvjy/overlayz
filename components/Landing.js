@@ -11,52 +11,52 @@ import FamilyBox from "./Family";
 
 const Landing = () => {
 
-    return (
-        <>
-            <LandingHome>
-                <LandingContainer>
-                    <ContentWrap>
-                        <TopWrap>
-                            <LogoO>
-                                <img src="/overlayz.png" />
-                            </LogoO>
-                            <LogoText>
-                                <ContentLogo>
-                                    <img src="/overlayz-studio.png" />
-                                </ContentLogo>
-                                <ContentBtn>
-                                    <Link href="https://twitter.com/realvjy" passHref>
-                                        <ButtonLink>
-                                            Contact Us
-                                        </ButtonLink>
-                                    </Link>
-                                </ContentBtn>
-                            </LogoText>
-                        </TopWrap>
+  return (
+    <>
+      <LandingHome>
+        <LandingContainer>
+          <ContentWrap>
+            <TopWrap>
+              <LogoO>
+                <img src="/overlayz.png" />
+              </LogoO>
+              <LogoText>
+                <ContentLogo>
+                  <img src="/overlayz-text.png" />
+                </ContentLogo>
+                <p>design studio and web3 experiment</p>
+              </LogoText>
+            </TopWrap>
+
+            <ContentBtn>
+              <Link href="https://twitter.com/realvjy" passHref>
+                <ButtonLink>
+                  Follow along
+                </ButtonLink>
+              </Link>
+            </ContentBtn>
+            <BottomWrap>
+              <FamilyBox />
+
+              <Founder>
+                <h3>founder</h3>
+                <h3 className="name">
+                  <Link href="http://vjy.me?ref=overlayz" passHref>
+                    <a>
+                      <img src="/realvjy.svg" />
+                    </a>
+                  </Link>
+                </h3>
+              </Founder>
+            </BottomWrap>
 
 
-                        <BottomWrap>
-                            <FamilyBox />
+          </ContentWrap>
+        </LandingContainer>
+      </LandingHome>
+    </>
 
-                            <Founder>
-                                <h3>founder</h3>
-                                <h3 className="name">
-                                    <Link href="http://vjy.me?ref=overlayz" passHref>
-                                        <a>
-                                            <img src="/realvjy.svg" />
-                                        </a>
-                                    </Link>
-                                </h3>
-                            </Founder>
-                        </BottomWrap>
-
-
-                    </ContentWrap>
-                </LandingContainer>
-            </LandingHome>
-        </>
-
-    )
+  )
 };
 
 export default Landing;
@@ -67,13 +67,14 @@ const LandingHome = styled.div`
     display: flex;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
         height: auto;
+        overflow: auto;
     }
 `
 
 const LandingContainer = styled(Container)`
-    height: 90%;
 `
 
 const ContentWrap = styled.div`
@@ -81,32 +82,32 @@ const ContentWrap = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 80%;
+    
     padding: 32px;
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
-        align-items: flex-start;
         padding-left: 40px;
         padding-right: 40px;
     }
 `
 
 const ContentLogo = styled.div`
-    margin-bottom: 24px;
     display: flex;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    
     img{
-        height: 160px;
+        height: 48px;
         @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
-            height: 100px;
+            height: 36px;
         }
     }
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
-        max-width: 85%;
     }
 `
 const ContentBtn = styled.div`
-    margin-top: 54px;
+    margin-top: 24px;
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
-        margin-top: 32px;
+        margin-top: 20px;
     }
 `
 
@@ -154,18 +155,24 @@ const OShadow = styled.div`
 `
 
 const Founder = styled.div`
-    margin-top: 80px;
+    margin-top: 120px;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+    padding-bottom: 100px;
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
         position: initial;
-        justify-content: flex-start;
+        margin-top: 50px;
+        padding-bottom: 20px;
     }
     h3{
         color: var(--light-black);
         font-weight: 400;
+        font-size: 20px;
+        @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+           font-size: 16px;
+        }
     }
     .name{
         margin-left: 8px;
@@ -175,6 +182,9 @@ const Founder = styled.div`
     a{
         img{
             height: 20px;
+            @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+                height: 16px;
+            }
         }
         color: var(--light-black);
         &:hover{
@@ -183,31 +193,50 @@ const Founder = styled.div`
     }
 `
 const BottomWrap = styled.div`
+    margin-top: 120px;
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
-        
+      margin-top: 20px;
     }
 `
 
 const TopWrap = styled.div`
     display: flex;
     align-items: center;
-    padding-top: 10%;
+    flex-direction: column;
+    margin-top: 20%;
+    position: relative;
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      inset: -2px;
+      opacity: .8;
+      background: var(--black);
+      filter: blur(12px);
+    }
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
         flex-direction: column;
         padding-top: 40px;
-        align-items: flex-start;
     }
 `
 const LogoO = styled.div`
     img{
-        height: 320px;
+        height: 120px;
         @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
-            height: 150px;
+            height: 100px;
         }
     }
 `
 const LogoText = styled.div`
-    margin-left: 60px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    p{
+      font-size: 18px;
+      opacity: .7;
+    }
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.laptop}) {
         margin-left: 0;
     }

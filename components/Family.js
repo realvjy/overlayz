@@ -9,6 +9,7 @@ const uiHues = "/uihues.png"
 const uiprint = "/uiprint.png"
 const bloo = "/bloo.png"
 const contra = "/contra.png"
+const lfg = "/lfg.png"
 const NextA = "/next.png"
 const Designletter = "/designletter.png"
 
@@ -18,6 +19,17 @@ const FamilyBox = () => {
         <Family>
             <h3>Our Family</h3>
             <FamWrap>
+                <Fam>
+                    <Link href="https://lilfrenz.group?ref=overlayz" passHref>
+                        <StyledLink>
+                            <img
+                                src={lfg}
+                                unoptimized={true}
+                            />
+                        </StyledLink>
+                    </Link>
+
+                </Fam>
                 <Fam>
                     <Link href="https://3dicons.co?ref=overlayz" passHref>
                         <StyledLink>
@@ -78,18 +90,7 @@ const FamilyBox = () => {
                     </Link>
 
                 </Fam>
-                <Fam>
-                    <Link href="https://contrauikit.com?ref=overlayz" passHref>
-                        <StyledLink>
-                            <img
-                                src={contra}
-                                unoptimized={true}
 
-                            />
-                        </StyledLink>
-                    </Link>
-
-                </Fam>
                 <Fam>
                     <Link href="http://bloouikit.com?ref=overlayz" passHref>
                         <StyledLink>
@@ -114,7 +115,18 @@ const FamilyBox = () => {
                     </Link>
 
                 </Fam>
+                <Fam>
+                    <Link href="https://contrauikit.com?ref=overlayz" passHref>
+                        <StyledLink>
+                            <img
+                                src={contra}
+                                unoptimized={true}
 
+                            />
+                        </StyledLink>
+                    </Link>
+
+                </Fam>
 
             </FamWrap>
         </Family>
@@ -127,24 +139,27 @@ export default FamilyBox;
 const Hero = styled.div`
 
 `
-
 const Family = styled.div`
     margin-top: 60px;
+    background: rgba(0,0,0,.07);
+    padding: 24px;
+    border-radius: 24px;
     h3{
-        font-size: 14px;
+        font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 6px;
-        margin: 12px 0;
+        margin-bottom: 16px;
         font-weight: 600;
         color: var(--light-black);
+        opacity: .6;
         text-align: center;
         @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-            text-align: left;
+            font-size: 10px;
+            letter-spacing: 4px;
         }
     }
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-        margin-top: 100px;
-        text-align: left;
+        margin-top: 30px;
     }
 `
 const FamWrap = styled.div`
@@ -156,15 +171,15 @@ const FamWrap = styled.div`
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
         grid-template-columns: repeat(5, 1fr);
         grid-auto-flow: row;
-        grid-gap: 24px;
+        grid-gap: 16px;
         justify-content: center;
     }
 `
 const Fam = styled.div`
     img{
-        height: 50px;
+        height: 36px;
         @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-            height: 40px;
+            height: 30px;
         }
     }
    
