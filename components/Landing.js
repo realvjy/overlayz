@@ -24,12 +24,23 @@ const Landing = () => {
                 <ContentLogo>
                   <img src="/overlayz-text.png" />
                 </ContentLogo>
-                <p>design studio and web3 experiment</p>
+                <p>design, code and art studio </p>
+                <Founder>
+                  <h3>by</h3>
+                  <h3 className="name">
+                    <Link href="http://vjy.me?ref=overlayz" passHref>
+                      <a>
+                        <img src="/realvjy.svg" />
+                      </a>
+                    </Link>
+                  </h3>
+                </Founder>
+
               </LogoText>
             </TopWrap>
 
             <ContentBtn>
-              <Link href="https://twitter.com/realvjy" passHref>
+              <Link href="https://twitter.com/overlayzstudio" passHref>
                 <ButtonLink>
                   Follow along
                 </ButtonLink>
@@ -38,16 +49,7 @@ const Landing = () => {
             <BottomWrap>
               <FamilyBox />
 
-              <Founder>
-                <h3>founder</h3>
-                <h3 className="name">
-                  <Link href="http://vjy.me?ref=overlayz" passHref>
-                    <a>
-                      <img src="/realvjy.svg" />
-                    </a>
-                  </Link>
-                </h3>
-              </Founder>
+
             </BottomWrap>
 
 
@@ -155,12 +157,11 @@ const OShadow = styled.div`
 `
 
 const Founder = styled.div`
-    margin-top: 120px;
     display: flex;
+    margin-top: 24px;
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding-bottom: 100px;
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
         position: initial;
         margin-top: 50px;
@@ -181,13 +182,14 @@ const Founder = styled.div`
     }
     a{
         img{
-            height: 20px;
+            height: 54px;
             @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
                 height: 16px;
             }
         }
         color: var(--light-black);
         &:hover{
+            opacity: 0.8;
             color: var(--white);
         }
     }

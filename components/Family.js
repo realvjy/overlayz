@@ -19,17 +19,7 @@ const FamilyBox = () => {
         <Family>
             <h3>Our Family</h3>
             <FamWrap>
-                <Fam>
-                    <Link href="https://lilfrenz.group?ref=overlayz" passHref>
-                        <StyledLink>
-                            <img
-                                src={lfg}
-                                unoptimized={true}
-                            />
-                        </StyledLink>
-                    </Link>
 
-                </Fam>
                 <Fam>
                     <Link href="https://3dicons.co?ref=overlayz" passHref>
                         <StyledLink>
@@ -61,6 +51,17 @@ const FamilyBox = () => {
                                 src={illlu}
                                 unoptimized={true}
 
+                            />
+                        </StyledLink>
+                    </Link>
+
+                </Fam>
+                <Fam>
+                    <Link href="https://lilfrenz.group?ref=overlayz" passHref>
+                        <StyledLink>
+                            <img
+                                src={lfg}
+                                unoptimized={true}
                             />
                         </StyledLink>
                     </Link>
