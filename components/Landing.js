@@ -26,7 +26,7 @@ const Landing = () => {
                 </ContentLogo>
                 <p>design, code and art studio </p>
                 <Founder>
-                  <h3>by</h3>
+                  <h3>by wizard</h3>
                   <h3 className="name">
                     <Link href="http://vjy.me?ref=overlayz" passHref>
                       <a>
@@ -164,8 +164,6 @@ const Founder = styled.div`
     align-items: center;
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
         position: initial;
-        margin-top: 50px;
-        padding-bottom: 20px;
     }
     h3{
         color: var(--light-black);
@@ -184,7 +182,7 @@ const Founder = styled.div`
         img{
             height: 54px;
             @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-                height: 16px;
+                height: 40px;
             }
         }
         color: var(--light-black);
